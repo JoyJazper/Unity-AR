@@ -68,6 +68,9 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         private bool m_IsQuitting = false;
 
+        //Changes Made by the Joy Kumar
+        //To check the number of Objects
+        bool SofaCount = false;
         /// <summary>
         /// The Unity Awake() method.
         /// </summary>
@@ -117,13 +120,14 @@ namespace GoogleARCore.Examples.HelloAR
                 {
                     // Choose the prefab based on the Trackable that got hit.
                     GameObject prefab;
+                    DetectedPlane detectedPlane = null;
                     if (hit.Trackable is FeaturePoint)
                     {
                         prefab = GameObjectPointPrefab;
                     }
                     else if (hit.Trackable is DetectedPlane)
                     {
-                        DetectedPlane detectedPlane = hit.Trackable as DetectedPlane;
+                        detectedPlane = hit.Trackable as DetectedPlane;
                         if (detectedPlane.PlaneType == DetectedPlaneType.Vertical)
                         {
                             prefab = GameObjectVerticalPlanePrefab;
@@ -137,9 +141,23 @@ namespace GoogleARCore.Examples.HelloAR
                     {
                         prefab = GameObjectHorizontalPlanePrefab;
                     }
-
+                    // Changes made by Joy Kumar.
+                    // Checking the number of objects.
+                    // Logic for controlling the number of sofas
+                    if(detectedPlane != null)
+                    {
+                        if((detectedPlane.PlaneType != DetectedPlaneType.Vertical) && SofaCount == false)
+                        {
+                            var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                            SofaCount = true;
+                        }
+                        else if((detectedPlane.PlaneType == DetectedPlaneType.Vertical))
+                        {
+                            var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                        }
+                    }
                     // Instantiate prefab at the hit pose.
-                    var gameObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+
 
                     // Compensate for the hitPose rotation facing away from the raycast (i.e.
                     // camera).
