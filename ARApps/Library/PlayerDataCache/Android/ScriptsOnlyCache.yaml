@@ -893,4 +893,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity
-  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0.2.apk
+  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0-2.apk
