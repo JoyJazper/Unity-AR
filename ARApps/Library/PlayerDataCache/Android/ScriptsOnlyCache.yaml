@@ -38,14 +38,19 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
-    Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity:
+    Assets/ARScene1/Scenes/ARDecorator.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -83,67 +88,77 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11606}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 12034}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12050}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12144}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12300}
+      Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12112}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 12682}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 12728}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12836}
+      Script: {instanceID: 12514}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12652}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12688}
     - Class: 114
-      Script: {instanceID: 13006}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 13234}
+      Script: {instanceID: 12894}
+    - Class: 114
+      Script: {instanceID: 12908}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 13014}
+    - Class: 114
+      Script: {instanceID: 13114}
     - Class: 114
       Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13344}
+      Script: {instanceID: 13250}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13352}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13412}
     - Class: 114
-      Script: {instanceID: 13552}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 15666}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 15674}
+      Script: {instanceID: 13760}
     - Class: 114
-      Script: {instanceID: 33070}
+      Script: {instanceID: 13782}
+    - Class: 114
+      Script: {instanceID: 13834}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,6 +250,12 @@ ScriptsOnlyBuild:
     className: LeanFingerDown
   - hash:
       serializedVersion: 2
+      Hash: 7bdfefcdca59f0ef5af488afc5219c4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoEnabler
+  - hash:
+      serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -323,6 +344,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 2f07c0b34e937cd537eef4f944c70353
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoClickDetection
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -565,7 +592,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f3d1807a613ed4b83d9c90e8aa51a8a1
+      Hash: fee2ea2b5bdae1cd113a2eb091785ba7
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.HelloAR
     className: HelloARController
@@ -629,6 +656,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Touch
     className: LeanPulseScale
+  - hash:
+      serializedVersion: 2
+      Hash: dc926798c2f522585046de05f691a6d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoScaleScript
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -877,6 +910,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e4d8ab34a529e6460d41ca3fa25af965
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoTranslateScript
+  - hash:
+      serializedVersion: 2
       Hash: c36d1b2deafa5aece5cc8b07e85fcab6
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore
@@ -1019,6 +1058,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Touch
     className: LeanFingerTap
+  - hash:
+      serializedVersion: 2
+      Hash: d04b49889a89f6f35a60d7d448277eab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GizmoViewScript
   - hash:
       serializedVersion: 2
       Hash: 1db723b554a361a812257e508051085f
@@ -1225,47 +1270,23 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 2f07c0b34e937cd537eef4f944c70353
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoClickDetection
-  - hash:
-      serializedVersion: 2
-      Hash: dc926798c2f522585046de05f691a6d5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoScaleScript
-  - hash:
-      serializedVersion: 2
-      Hash: e4d8ab34a529e6460d41ca3fa25af965
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoTranslateScript
-  - hash:
-      serializedVersion: 2
-      Hash: d04b49889a89f6f35a60d7d448277eab
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GizmoViewScript
-  - hash:
-      serializedVersion: 2
       Hash: 02c8dc8137c3ebf59b810a7a2117f2e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GizmoRotateScript
   - hash:
       serializedVersion: 2
-      Hash: 7bdfefcdca59f0ef5af488afc5219c4c
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 76622e90a4d1de98d75451fc9b8f8d4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GizmoEnabler
+    className: DropDownPanel
   platform: 13
   scenePathNames:
-  - Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity
-  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0-5.apk
+  - Assets/ARScene1/Scenes/ARDecorator.unity
+  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0-6.apk

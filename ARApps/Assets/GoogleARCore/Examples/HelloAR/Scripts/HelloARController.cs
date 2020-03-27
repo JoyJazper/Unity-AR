@@ -25,6 +25,7 @@ namespace GoogleARCore.Examples.HelloAR
     using GoogleARCore.Examples.Common;
     using UnityEngine;
     using UnityEngine.EventSystems;
+    using UnityEngine.UI;
 
 #if UNITY_EDITOR
     // Set up touch input propagation while using Instant Preview in the editor.
@@ -79,8 +80,98 @@ namespace GoogleARCore.Examples.HelloAR
             // Enable ARCore to target 60fps camera capture frame rate on supported devices.
             // Note, Application.targetFrameRate is ignored when QualitySettings.vSyncCount != 0.
             Application.targetFrameRate = 60;
+            
         }
 
+        // Code change by Joy kumar
+        // For the Dropdown Menu
+
+        public GameObject[] dropdownObjects;
+        public List<GameObject> objectPrafabs;
+        public Dropdown myDropdown;
+        List<string> options = new List<string>();
+
+        void start()
+        {
+
+
+            // Method #2: Incorrect casting results in array of null objects. ====================================
+
+
+            dropdownObjects = Resources.LoadAll<GameObject>("Items");
+
+            /*
+            // Method #3: Incorrect casting results in array of null objects. ====================================
+            try
+            {
+
+                GameObject[] loadedObjects = Resources.LoadAll("GameObjects", typeof(GameObject)) as GameObject[];
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            // Method #4: Incorrect casting results in InvalidCastException. ====================================
+            try
+            {
+
+                GameObject[] loadedObjects = (GameObject[])Resources.LoadAll("GameObjects", typeof(GameObject));
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            // Method #5: DOUBLE KILL! Please don't ever do this. I fear the world may implode. ====================================
+            try
+            {
+
+                GameObject[] loadedObjects = (GameObject[])Resources.LoadAll("GameObjects", typeof(GameObject)) as GameObject[];
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            // Proper Method: Casting correctly for expected type of loaded objects results in a valid list of loaded objects. ============
+            try
+            {
+
+                var loadedObjects = Resources.LoadAll("GameObjects", typeof(GameObject)).Cast<GameObject>();
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            */
+
+            //dropdownObjects = GameObject.FindGameObjectsWithTag("RealItem"); // For example
+            PopulateDropdown(myDropdown, dropdownObjects);
+
+
+        }
+
+        void PopulateDropdown(Dropdown dropdown, GameObject[] optionsArray)
+        {
+            
+            foreach (GameObject option in optionsArray)
+            {
+                options.Add(option.name); // Or whatever you want for a label
+            }
+            dropdown.ClearOptions();
+            dropdown.AddOptions(options);
+        }
+
+        public void Dropdown_IndexChanged(int index)
+        {
+            GameObjectVerticalPlanePrefab = dropdownObjects.GetValue(index) as GameObject;
+            GameObjectHorizontalPlanePrefab = dropdownObjects.GetValue(index) as GameObject;
+        }
         /// <summary>
         /// The Unity Update() method.
         /// </summary>
@@ -245,6 +336,11 @@ namespace GoogleARCore.Examples.HelloAR
                     toastObject.Call("show");
                 }));
             }
+        }
+
+        public void UpdateSelectedObject(string ItemName)
+        {
+
         }
     }
 }
