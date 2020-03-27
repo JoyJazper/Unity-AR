@@ -2,6 +2,9 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Clamping
+    - GizmoClickDetection
+    - GizmoEnabler
+    - GizmoRotateScript
     - GoogleARCore.ARCoreBackgroundRenderer
     - GoogleARCore.ARCoreCameraConfigFilter
     - GoogleARCore.ARCoreSession
@@ -14,6 +17,7 @@ ScriptsOnlyBuild:
     - GoogleARCore.Examples.Common.RawImageVideoPlayer
     - GoogleARCore.Examples.HelloAR.HelloARController
     - Lean.Touch.LeanDragTranslate
+    - Lean.Touch.LeanFingerTap
     - Lean.Touch.LeanPinchScale
     - Lean.Touch.LeanTouch
     Unity.2D.Tilemap.Editor.dll:
@@ -62,6 +66,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 84
@@ -75,61 +81,69 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11520}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 11942}
-    - Class: 114
-      Script: {instanceID: 11952}
-    - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 12022}
     - Class: 114
       Script: {instanceID: 12034}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12136}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12300}
     - Class: 114
-      Script: {instanceID: 12616}
+      Script: {instanceID: 12508}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12630}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12682}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12836}
     - Class: 114
-      Script: {instanceID: 13220}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 13380}
+      Script: {instanceID: 13006}
     - Class: 114
-      Script: {instanceID: 13442}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 38344}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 38360}
+      Script: {instanceID: 13344}
     - Class: 114
-      Script: {instanceID: 38374}
+      Script: {instanceID: 13356}
     - Class: 114
-      Script: {instanceID: 49716}
+      Script: {instanceID: 13402}
+    - Class: 114
+      Script: {instanceID: 13468}
+    - Class: 114
+      Script: {instanceID: 13552}
+    - Class: 114
+      Script: {instanceID: 13750}
+    - Class: 114
+      Script: {instanceID: 15666}
+    - Class: 114
+      Script: {instanceID: 15674}
+    - Class: 114
+      Script: {instanceID: 33070}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,16 +169,40 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: a1f19ad47d3094e235f21b74dfc423a8
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessLayer
+  - hash:
+      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ColorGrading
+  - hash:
+      serializedVersion: 2
+      Hash: b13de7a0a457cb8e026d4237dc1b5797
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: LensDistortion
+  - hash:
+      serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 13f7c7b3cb85830b9bf1da0f58faca1e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerSet
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -191,6 +229,18 @@ ScriptsOnlyBuild:
     className: Anchor
   - hash:
       serializedVersion: 2
+      Hash: 560bbc9fb5214b9a13ad0de4fd2b9b43
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerDown
+  - hash:
+      serializedVersion: 2
+      Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Bloom
+  - hash:
+      serializedVersion: 2
       Hash: 5bd9a19c7b5f76c563418e28f48a561b
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -201,6 +251,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: af93f9c42e90877a9ba31e37adfd900c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: MotionBlur
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -269,6 +325,18 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanTouchEvents
+  - hash:
+      serializedVersion: 2
+      Hash: f542c1afca5bb4022f91fdda19b8d622
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: DepthOfField
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -293,10 +361,28 @@ ScriptsOnlyBuild:
     className: ComputerVisionController
   - hash:
       serializedVersion: 2
+      Hash: a1fcc866397a836af63817d24343caca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Common.Examples
+    className: LeanDocumentation
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 9845bdbc613fa56187574b0df6ae33ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSelect
+  - hash:
+      serializedVersion: 2
+      Hash: 63d7b9b64a11859f416d72ba9a3c3fec
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -311,6 +397,18 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: fe29ae2aa38c9237768b1f22cddf449d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanTwistRotateAxis
+  - hash:
+      serializedVersion: 2
+      Hash: 38bcb4d3f9a1812fd650f92e87a4cf64
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -321,6 +419,24 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: eb27b06c0eaa67d17f6c84edaee630af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanRoll
+  - hash:
+      serializedVersion: 2
+      Hash: e82c0521cdfe8cb6a168ef7208a98d4a
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Vignette
+  - hash:
+      serializedVersion: 2
+      Hash: cf1ad9af57e51d3949ba525fb4534068
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanDestroy
   - hash:
       serializedVersion: 2
       Hash: 1e9c409e29cdc019c5521daf5eb17010
@@ -389,6 +505,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 6c1ab29ddfcd6014cccb0aadc55da469
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanPlane
+  - hash:
+      serializedVersion: 2
       Hash: d251bf88db6c95a6b1aa0b69298da9ef
     assemblyName: UnityEngine.SpatialTracking.dll
     namespaceName: UnityEngine.SpatialTracking
@@ -401,6 +523,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: ee6a55fd6f4f0f59591afbf34813acf4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerSwipe
+  - hash:
+      serializedVersion: 2
       Hash: 72c3a3bf16e34620934073ef94cabbe1
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore
@@ -411,6 +539,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.Common
     className: PlaneDiscoveryGuide
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdjustTimeScale
+  - hash:
+      serializedVersion: 2
+      Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -467,6 +607,12 @@ ScriptsOnlyBuild:
     className: NetworkLobbyManager
   - hash:
       serializedVersion: 2
+      Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
       Hash: 5887ef1bc706b22b773d253fd443ceef
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -477,6 +623,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore
     className: ARCoreBackgroundRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: a73cc7e0d8575dd7105e0f0616a7253a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanPulseScale
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -491,6 +643,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: f130a8423e6424a57c8b7679ec028c5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanTwistRotate
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -501,6 +659,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: ARCoreWorldOriginHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 94787cde64aea8d2ddd6cf5584f4b697
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanInfoText
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -515,6 +679,12 @@ ScriptsOnlyBuild:
     className: NetworkManager
   - hash:
       serializedVersion: 2
+      Hash: d6fc8d3165070298511ec776ea575626
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessResources
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -527,6 +697,24 @@ ScriptsOnlyBuild:
     className: PointcloudVisualizer
   - hash:
       serializedVersion: 2
+      Hash: 498da3fe40fc83ad3a4de930efd7d267
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProximityActivate
+  - hash:
+      serializedVersion: 2
+      Hash: a53651ee3996fbba20dfe0fce02f0b23
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AutoExposure
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.ProGrids.dll
+    namespaceName: UnityEngine.ProGrids
+    className: IgnoreSnap
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
@@ -537,6 +725,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.AugmentedFaces
     className: ARCoreAugmentedFaceRig
+  - hash:
+      serializedVersion: 2
+      Hash: 50c443b12ccc0b475183318b5088bcc5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessDebug
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -563,10 +757,28 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 964dce81080816542d4e5b1440191200
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanTouch
+  - hash:
+      serializedVersion: 2
+      Hash: 4326d1e3ad2be563855e0ee0cac8ddb9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Common.Examples
+    className: LeanCircuit
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.ObjectManipulation
     className: RotationManipulator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Clamping
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -587,6 +799,12 @@ ScriptsOnlyBuild:
     className: NetworkStartPosition
   - hash:
       serializedVersion: 2
+      Hash: bb1f0eabf586c59f439d232ff8a83b3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleCharacterMotor
+  - hash:
+      serializedVersion: 2
       Hash: 1ab92b1501bff4203df13dd5880207c1
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.AugmentedFaces
@@ -603,6 +821,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.Common
     className: RawImageVideoPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 67ff0514655e6b8be1eef9147b3f7076
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanDragCamera
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -665,10 +889,28 @@ ScriptsOnlyBuild:
     className: NetworkMigrationManager
   - hash:
       serializedVersion: 2
+      Hash: e2efc7cfa5234245c18c3065917d8945
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanPath
+  - hash:
+      serializedVersion: 2
+      Hash: 36808e0bceda2a44a651d2c754474786
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnEffect
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a4ffa6bc28a5a8d937cd8beac7f03196
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSelectable
   - hash:
       serializedVersion: 2
       Hash: 5a95f817a1636cb57e1923240ad0cfa1
@@ -677,16 +919,46 @@ ScriptsOnlyBuild:
     className: ARCoreSessionConfig
   - hash:
       serializedVersion: 2
+      Hash: 253ead52687ebcf6bf2e6bb68055e28a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerOld
+  - hash:
+      serializedVersion: 2
       Hash: edb986b6ebeb66208841352d63987938
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.CloudAnchors
     className: CloudAnchorsExampleController
   - hash:
       serializedVersion: 2
+      Hash: 8860633d29a22ff64e02e18da3716cdf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityTemplateProjects
+    className: SimpleCameraController
+  - hash:
+      serializedVersion: 2
+      Hash: 564363b71973ff9b7c6dafd1d3a1fcfb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Common.Examples
+    className: LeanLinkTo
+  - hash:
+      serializedVersion: 2
       Hash: 40eab39826f66889566d3a3e6ef95673
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.ObjectManipulation
     className: TranslationManipulator
+  - hash:
+      serializedVersion: 2
+      Hash: 58e68364412c67eae2bdb4954be2dcc2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Readme
+  - hash:
+      serializedVersion: 2
+      Hash: f60dcd5f5b8383f6a0a75b8c21b7aa79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanPinchScale
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -731,10 +1003,22 @@ ScriptsOnlyBuild:
     className: DetectedPlaneGenerator
   - hash:
       serializedVersion: 2
+      Hash: 9277194e3007f91c41cc4dd392ebc5cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSelectableSpriteRendererColor
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.Common
     className: DetectedPlaneVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: e793e4ea83e3d40a5a248af575e7d5cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerTap
   - hash:
       serializedVersion: 2
       Hash: 1db723b554a361a812257e508051085f
@@ -779,10 +1063,40 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 9277194e3007f91c41cc4dd392ebc5cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSelectableGraphicColor
+  - hash:
+      serializedVersion: 2
       Hash: e6ae40841db498b6e673877ac45ad208
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 142b2440489d18f3148c015fea425be8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanDragTranslate
+  - hash:
+      serializedVersion: 2
+      Hash: d5630f96bd5a6a6eed7e1754c3fb8703
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 253ead52687ebcf6bf2e6bb68055e28a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanFingerUp
+  - hash:
+      serializedVersion: 2
+      Hash: d0987ce3e9092dbe0fa30d73f333fffa
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Grain
   - hash:
       serializedVersion: 2
       Hash: df434544c9f7b33d1cc7e635b180d279
@@ -797,6 +1111,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: ac6acd886c54c48c599ab5fed5781ea7
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AmbientOcclusion
+  - hash:
+      serializedVersion: 2
       Hash: a6be390312032ba0856f81fc3c448644
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.ObjectManipulation
@@ -807,6 +1127,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 7b3216bb34fdd4bb3a48518a010216c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RampAsset
   - hash:
       serializedVersion: 2
       Hash: 9b895dcabbc1faf095c000c32d471fd0
@@ -821,10 +1147,22 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 4e0bfd1d29eec1f3cda6b997a7d81004
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanDragTrail
+  - hash:
+      serializedVersion: 2
       Hash: e0ee4b3d4e27318934cc940a969d3d96
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkManagerHUD
+  - hash:
+      serializedVersion: 2
+      Hash: f0e792afefd9f5d684aaa5a3dd8994f2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSpawn
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -857,6 +1195,12 @@ ScriptsOnlyBuild:
     className: CloudAnchorsNetworkManager
   - hash:
       serializedVersion: 2
+      Hash: 330f62fcfa21b2047340eab154927cfc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Lean.Touch
+    className: LeanSelectableRendererColor
+  - hash:
+      serializedVersion: 2
       Hash: aa88ae22474df55295327e4ee99e5a24
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -887,335 +1231,41 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: a1f19ad47d3094e235f21b74dfc423a8
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessLayer
-  - hash:
-      serializedVersion: 2
-      Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: ColorGrading
-  - hash:
-      serializedVersion: 2
-      Hash: b13de7a0a457cb8e026d4237dc1b5797
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: LensDistortion
-  - hash:
-      serializedVersion: 2
-      Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: Bloom
-  - hash:
-      serializedVersion: 2
-      Hash: af93f9c42e90877a9ba31e37adfd900c
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: MotionBlur
-  - hash:
-      serializedVersion: 2
-      Hash: f542c1afca5bb4022f91fdda19b8d622
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: DepthOfField
-  - hash:
-      serializedVersion: 2
-      Hash: 63d7b9b64a11859f416d72ba9a3c3fec
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: ScreenSpaceReflections
-  - hash:
-      serializedVersion: 2
-      Hash: 38bcb4d3f9a1812fd650f92e87a4cf64
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessProfile
-  - hash:
-      serializedVersion: 2
-      Hash: e82c0521cdfe8cb6a168ef7208a98d4a
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: Vignette
-  - hash:
-      serializedVersion: 2
-      Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessEffectSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: ChromaticAberration
-  - hash:
-      serializedVersion: 2
-      Hash: d6fc8d3165070298511ec776ea575626
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessResources
-  - hash:
-      serializedVersion: 2
-      Hash: a53651ee3996fbba20dfe0fce02f0b23
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: AutoExposure
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.ProGrids.dll
-    namespaceName: UnityEngine.ProGrids
-    className: IgnoreSnap
-  - hash:
-      serializedVersion: 2
-      Hash: 50c443b12ccc0b475183318b5088bcc5
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessDebug
-  - hash:
-      serializedVersion: 2
-      Hash: d5630f96bd5a6a6eed7e1754c3fb8703
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: PostProcessVolume
-  - hash:
-      serializedVersion: 2
-      Hash: d0987ce3e9092dbe0fa30d73f333fffa
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: Grain
-  - hash:
-      serializedVersion: 2
-      Hash: ac6acd886c54c48c599ab5fed5781ea7
-    assemblyName: Unity.Postprocessing.Runtime.dll
-    namespaceName: UnityEngine.Rendering.PostProcessing
-    className: AmbientOcclusion
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2f07c0b34e937cd537eef4f944c70353
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AdjustTimeScale
+    className: GizmoClickDetection
   - hash:
       serializedVersion: 2
-      Hash: 498da3fe40fc83ad3a4de930efd7d267
+      Hash: dc926798c2f522585046de05f691a6d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ProximityActivate
+    className: GizmoScaleScript
   - hash:
       serializedVersion: 2
-      Hash: bb1f0eabf586c59f439d232ff8a83b3b
+      Hash: e4d8ab34a529e6460d41ca3fa25af965
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SimpleCharacterMotor
+    className: GizmoTranslateScript
   - hash:
       serializedVersion: 2
-      Hash: 36808e0bceda2a44a651d2c754474786
+      Hash: d04b49889a89f6f35a60d7d448277eab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SpawnEffect
+    className: GizmoViewScript
   - hash:
       serializedVersion: 2
-      Hash: 8860633d29a22ff64e02e18da3716cdf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityTemplateProjects
-    className: SimpleCameraController
-  - hash:
-      serializedVersion: 2
-      Hash: 58e68364412c67eae2bdb4954be2dcc2
+      Hash: 02c8dc8137c3ebf59b810a7a2117f2e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Readme
+    className: GizmoRotateScript
   - hash:
       serializedVersion: 2
-      Hash: 7b3216bb34fdd4bb3a48518a010216c7
+      Hash: 7bdfefcdca59f0ef5af488afc5219c4c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RampAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 13f7c7b3cb85830b9bf1da0f58faca1e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerSet
-  - hash:
-      serializedVersion: 2
-      Hash: 560bbc9fb5214b9a13ad0de4fd2b9b43
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerDown
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanTouchEvents
-  - hash:
-      serializedVersion: 2
-      Hash: a1fcc866397a836af63817d24343caca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Common.Examples
-    className: LeanDocumentation
-  - hash:
-      serializedVersion: 2
-      Hash: 9845bdbc613fa56187574b0df6ae33ed
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSelect
-  - hash:
-      serializedVersion: 2
-      Hash: fe29ae2aa38c9237768b1f22cddf449d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanTwistRotateAxis
-  - hash:
-      serializedVersion: 2
-      Hash: eb27b06c0eaa67d17f6c84edaee630af
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanRoll
-  - hash:
-      serializedVersion: 2
-      Hash: cf1ad9af57e51d3949ba525fb4534068
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanDestroy
-  - hash:
-      serializedVersion: 2
-      Hash: 6c1ab29ddfcd6014cccb0aadc55da469
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanPlane
-  - hash:
-      serializedVersion: 2
-      Hash: ee6a55fd6f4f0f59591afbf34813acf4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerSwipe
-  - hash:
-      serializedVersion: 2
-      Hash: a73cc7e0d8575dd7105e0f0616a7253a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanPulseScale
-  - hash:
-      serializedVersion: 2
-      Hash: f130a8423e6424a57c8b7679ec028c5d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanTwistRotate
-  - hash:
-      serializedVersion: 2
-      Hash: 94787cde64aea8d2ddd6cf5584f4b697
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanInfoText
-  - hash:
-      serializedVersion: 2
-      Hash: 964dce81080816542d4e5b1440191200
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanTouch
-  - hash:
-      serializedVersion: 2
-      Hash: 4326d1e3ad2be563855e0ee0cac8ddb9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Common.Examples
-    className: LeanCircuit
-  - hash:
-      serializedVersion: 2
-      Hash: 67ff0514655e6b8be1eef9147b3f7076
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanDragCamera
-  - hash:
-      serializedVersion: 2
-      Hash: e2efc7cfa5234245c18c3065917d8945
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanPath
-  - hash:
-      serializedVersion: 2
-      Hash: a4ffa6bc28a5a8d937cd8beac7f03196
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSelectable
-  - hash:
-      serializedVersion: 2
-      Hash: 253ead52687ebcf6bf2e6bb68055e28a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerOld
-  - hash:
-      serializedVersion: 2
-      Hash: 564363b71973ff9b7c6dafd1d3a1fcfb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Common.Examples
-    className: LeanLinkTo
-  - hash:
-      serializedVersion: 2
-      Hash: f60dcd5f5b8383f6a0a75b8c21b7aa79
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanPinchScale
-  - hash:
-      serializedVersion: 2
-      Hash: 9277194e3007f91c41cc4dd392ebc5cb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSelectableSpriteRendererColor
-  - hash:
-      serializedVersion: 2
-      Hash: e793e4ea83e3d40a5a248af575e7d5cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerTap
-  - hash:
-      serializedVersion: 2
-      Hash: 9277194e3007f91c41cc4dd392ebc5cb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSelectableGraphicColor
-  - hash:
-      serializedVersion: 2
-      Hash: 142b2440489d18f3148c015fea425be8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanDragTranslate
-  - hash:
-      serializedVersion: 2
-      Hash: 253ead52687ebcf6bf2e6bb68055e28a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanFingerUp
-  - hash:
-      serializedVersion: 2
-      Hash: 4e0bfd1d29eec1f3cda6b997a7d81004
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanDragTrail
-  - hash:
-      serializedVersion: 2
-      Hash: f0e792afefd9f5d684aaa5a3dd8994f2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSpawn
-  - hash:
-      serializedVersion: 2
-      Hash: 330f62fcfa21b2047340eab154927cfc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Lean.Touch
-    className: LeanSelectableRendererColor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Clamping
+    className: GizmoEnabler
   platform: 13
   scenePathNames:
   - Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity
-  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0-4.apk
+  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/HelloAR/SofaFrameApp0-5.apk
