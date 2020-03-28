@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/ARScene1/Scenes/ARDecorator.unity
+- path: Assets/ARScene2/Scenes/KaronaSelfie.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

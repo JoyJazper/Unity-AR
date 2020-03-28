@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ARScene1/Scenes/ARDecorator.unity
-    guid: 269f28056aefd7b43b4d6ae02285c74f
+    path: Assets/ARScene2/Scenes/KaronaSelfie.unity
+    guid: 7ae888f657d1df245b4c8bd118429e96
   m_configObjects: {}
