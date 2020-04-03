@@ -9,13 +9,11 @@ ScriptsOnlyBuild:
     - GoogleARCore.ARCoreCameraConfigFilter
     - GoogleARCore.ARCoreSession
     - GoogleARCore.ARCoreSessionConfig
-    - GoogleARCore.Examples.AugmentedFaces.ARCoreAugmentedFaceMeshFilter
-    - GoogleARCore.Examples.AugmentedFaces.ARCoreAugmentedFaceRig
-    - GoogleARCore.Examples.AugmentedFaces.AugmentedFacesExampleController
+    - GoogleARCore.Examples.ComputerVision.ComputerVisionController
+    - GoogleARCore.Examples.ComputerVision.PointClickHandler
     - Lean.Touch.LeanDragTranslate
     - Lean.Touch.LeanFingerTap
     - Lean.Touch.LeanPinchScale
-    - TakeAPhoto
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -34,13 +32,17 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.VerticalLayoutGroup
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
-    Assets/ARScene2/Scenes/KaronaSelfie.unity:
+    Assets/GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -63,6 +65,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -70,35 +74,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11560}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11622}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 12152}
+      Script: {instanceID: 12114}
     - Class: 114
-      Script: {instanceID: 12308}
+      Script: {instanceID: 12150}
     - Class: 114
-      Script: {instanceID: 12330}
-    - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 12306}
     - Class: 114
       Script: {instanceID: 12642}
     - Class: 114
       Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12750}
     - Class: 114
       Script: {instanceID: 12900}
     - Class: 114
@@ -116,18 +118,20 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13418}
     - Class: 114
+      Script: {instanceID: 13482}
+    - Class: 114
       Script: {instanceID: 13484}
     - Class: 114
       Script: {instanceID: 13570}
     - Class: 114
       Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 13842}
+      Script: {instanceID: 13790}
+    - Class: 114
+      Script: {instanceID: 13844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -624,12 +628,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GizmoScaleScript
-  - hash:
-      serializedVersion: 2
-      Hash: 1b29739befc873d927cc46244ad2e372
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TakeAPhoto
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -1254,7 +1252,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a53ac3415f10f94cdbb11c1a46de7917
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FilterSwap
   platform: 13
   scenePathNames:
-  - Assets/ARScene2/Scenes/KaronaSelfie.unity
-  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/FaceAugmentation/KaronaFace#02.apk
+  - Assets/GoogleARCore/Examples/ComputerVision/Scenes/ComputerVision.unity
+  playerPath: D:/SelfDev/Unity/ARApps/APKOutputs/ARApp1/Computervision/CVision#1.apk

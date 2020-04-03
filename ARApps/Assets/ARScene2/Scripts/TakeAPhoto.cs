@@ -111,7 +111,8 @@ public class TakeAPhoto : MonoBehaviour
 
 }
 */
-/*using UnityEditor;
+/*
+using UnityEditor;
 using UnityEngine;
 using System.Collections;
 
@@ -149,7 +150,7 @@ public class TakeAPhoto : MonoBehaviour
             RenderTexture.active = null; // JC: added to avoid errors
             Destroy(rt);
             byte[] bytes = screenShot.EncodeToPNG();
-            /*string filename = EditorUtility.SaveFilePanel(
+            string filename = EditorUtility.SaveFilePanel(
             "Save texture as PNG",
             "",
             "test" + ".png",
@@ -162,7 +163,7 @@ public class TakeAPhoto : MonoBehaviour
         takeHiResShot = false;
     }
 
-   /* protected string m_textPath;
+    protected string m_textPath;
 
     protected FileBrowser m_fileBrowser;
 
@@ -208,4 +209,5 @@ public class TakeAPhoto : MonoBehaviour
         m_fileBrowser = null;
         string m_Path = path;
     }
-}*/
+}
+*/
